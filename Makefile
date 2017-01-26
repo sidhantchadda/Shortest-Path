@@ -1,7 +1,7 @@
-all: lab6
+all: path
 
-lab6: main.cpp Dijkstra.cpp A.cpp
-	g++ -std=c++11 -g -o lab6 main.cpp Dijkstra.cpp A.cpp
+path: main.cpp Dijkstra.cpp A.cpp
+	g++ -std=c++11 -g -o path main.cpp Dijkstra.cpp A.cpp
 
 clean:
-	rm -rf lab6
+	rm -rf path

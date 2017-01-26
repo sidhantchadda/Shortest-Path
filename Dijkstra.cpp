@@ -17,11 +17,15 @@ public:
 	}
 };
 void Dijkstra::compute(vector<LinkedList*> list, int startNode, int endNode) {
-	double dist[list.size()] = {};
-	int prev[list.size()] = {-1};
+	int listSize = list.size();
+	double dist[listSize];
+	int prev[listSize];
+	for(int i = 0; i<listSize; i++) {
+		prev[i] = -1;
+	}
 	priority_queue<Node, vector<Node>, Compare> queue;
 	
-	bool visited[list.size()] = {};
+	bool visited[list.size()];
 	dist[startNode] = 0.0;
 	for(int i = 0; i<list.size(); i++) {
 		if(i != startNode) {

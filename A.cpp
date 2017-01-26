@@ -14,14 +14,17 @@ class Compare {
 		}
 };
 void A::compute(vector<LinkedList*> adjList, int startNode, int endNode, vector<Point> points) {
-	bool closedSet[points.size()] = {false};
+	bool closedSet[points.size()];
 	priority_queue<Point, vector<Point>, Compare> queue;
-	int cameFrom[points.size()] = {-1};
+	int cameFrom[points.size()];
 	double gScore[points.size()];
+	bool openSet[points.size()];
 	for(int i = 0; i<points.size(); i++) {
 		gScore[i] = numeric_limits<double>::max();
+		closedSet[i] = false;
+		openSet[i] = false;
+		cameFrom[i] = -1;
 	}
-	bool openSet[points.size()] = {false};
 	gScore[startNode] = 0.0;
 
 	Point p;

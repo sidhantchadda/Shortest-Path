@@ -124,8 +124,7 @@ int main(int argc, char* argv[]) {
 	}
 	else if(argc == 6){
 		string str = argv[1];
-		//same file format for both
-		if((!str.compare("Astar")) || (!str.compare("ID"))) {
+		if((!str.compare("Astar"))) {
 			string mapFileName = argv[2];
 			string nodesFileName = argv[3];
 			string startNodeStr = argv[4];
