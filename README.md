@@ -7,7 +7,7 @@ In order to run and test this code for yourself first clone the repo:
 $ git clone https://github.com/koochi10/Shortest-Path.git
 $ cd Shortest-Path/
 ```
-In order to recompile the code run:
+In order to compile the code run:
 ```Bash
 $ make
 ```
